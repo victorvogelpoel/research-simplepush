@@ -3,6 +3,15 @@
 This PowerShell script sends notifications via the [Simplepush.io](https://simplepush.io) notification service.
 
 ```PowerShell
+$data = @{key='HuxgBB';title='title';msg='message';event='event'}
+Invoke-WebRequest -uri 'https://api.simplepush.io/send' -Method POST -Body $data
+```
+
+A more elaborate Cmdlet:
+
+
+
+```PowerShell
 # Send-Notification.ps1
 # Send a notification using the Simplepush service
 #
